@@ -1,0 +1,17 @@
+1)
+diff --git a/node.gyp b/node.gyp
+index 9da696d..ff8ce7b 100644
+--- a/node.gyp
++++ b/node.gyp
+@@ -55,6 +55,7 @@
+       'lib/os.js',
+       'lib/path.js',
+       'lib/process.js',
++      'lib/converter.js',
+       'lib/punycode.js',
+       'lib/querystring.js',
+       'lib/readline.js',
+
+
+
+2), delete any existing libnode.so (Maybe touch any node cc file is OK?)

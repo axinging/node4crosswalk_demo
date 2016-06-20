@@ -1,0 +1,20 @@
+<html>
+<body>
+<script>
+// get the system platform using node.js
+var os = require('os')
+converter = require('converter');
+//document.write('Our computer is: ', os.platform())
+
+var num = 10;
+
+var bin = converter.bin(num);
+console.log('BIN:' + bin);
+document.write('BIN is: ', bin);
+
+var hex = converter.hex(num);
+console.log('HEX: ' + hex);
+document.write('HEX is: ', hex);
+</script>
+</body>
+</html>
