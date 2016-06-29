@@ -1,0 +1,33 @@
+<html>
+
+<head>
+<meta charset="UTF-8">
+</head>
+
+<body>
+<script>
+// get the system platform using node.js
+var os = require('os')
+console.log("rename start");
+
+//Fixme: All below console.log didn't print at all.
+var fs = require('fs');
+fs.rename('/sdcard/hello', '/sdcard/world', (err) => {
+  console.log("rename ok 1"); 
+  if (err) throw err;
+  fs.stat('/sdcard/world', (err, stats) => {
+    console.log("rename ok 2");
+    if (err) throw err;
+    console.log("rename ok 3");
+    console.log(`stats: ${JSON.stringify(stats)}`);
+  });
+});
+
+
+
+fs.rename('/sdcard/hellosync', '/sdcard/worldsync');
+
+
+</script>
+</body>
+</html>
